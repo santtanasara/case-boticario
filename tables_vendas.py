@@ -30,9 +30,8 @@ merged_df = pd.concat(dataframes, ignore_index=True)
 print(f"Dataframe unificado. Total de linhas: {len(merged_df)}")
 
 #dedup dos dados
-
-merged_df = pd.concat(dataframes, ignore_index=True)
-print(f"Dataframe unificado. Total de linhas: {len(merged_df)}")
+deduplicated_df = merged_df.drop_duplicates()
+print(f"Dataframe deduplicado. Total de linhas: {len(deduplicated_df)}")
 
 #instalção do oauth para inseção dos dados nas tabelas do BQ
 !pip install google-auth
